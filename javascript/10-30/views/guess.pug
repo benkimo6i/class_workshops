@@ -1,0 +1,13 @@
+html
+  head
+    title Guess the Number!
+  body
+    h1 Guess the Number!
+    p We picked a number from 1-10: try to guess the number!
+
+    - if (message)
+      p= message
+
+    form(action="/guess" method="POST")
+      input(type="text" name="num")
+      input(type="submit" value="Guess!")
